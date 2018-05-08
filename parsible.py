@@ -228,26 +228,23 @@ if __name__ == '__main__':
 
     cmdline.add_argument('--debug',
                          '-d',
-                         action='store',
+                         action='store_true',
                          help='Enable Debugging',
                          dest='debug',
-                         default=False
                         )
 
     cmdline.add_argument('--batch-mode',
                          '-b',
-                         action='store',
+                         action='store_true',
                          help='If Set, Parsible will start at the top of the log file and exit once it reaches the end.  Useful for processing logs that are not realtime',
                          dest='batch',
-                         default=False
                         )
 
     cmdline.add_argument('--auto-reload',
                          '-a',
-                         action='store',
+                         action='store_true',
                          help='If Set, when receiving empty lines Parsible will check if there is a discrepancy between the stored and existing file descriptors for the log file. If a discrepancy is found, Parsible will reload the new file.',
                          dest='auto_reload',
-                         default=False
                         )
 
     args = cmdline.parse_args()
