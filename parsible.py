@@ -1,4 +1,3 @@
-#!/bin/python
 import sys, time, os, signal, imp, argparse, logging, traceback
 
 class Parsible(object):
